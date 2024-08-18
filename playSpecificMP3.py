@@ -2,7 +2,6 @@ import speech_recognition as sr
 import os
 import pygame
 
-# TODO: Make listen function loop for continuous feedback
 def listen():
     recognizer = sr.Recognizer()
     mic = sr.Microphone()
@@ -25,6 +24,8 @@ def listen():
             while pygame.mixer.music.get_busy():
                 pygame.time.Clock().tick(10)  # Check every 100ms if the music is still playing
             print(f"Finished playing {song}")
+        elif wordsInPhrase[0].lower() == "stop" and wordsInPhrase[1].lower() == "listening":
+            exit()
     except sr.UnknownValueError:
         print("Sorry, I could not understand the audio.")
     except sr.RequestError as e:
@@ -40,4 +41,5 @@ def play_song_from_directory(song, directory):
             pygame.mixer.music.play()
 
 if __name__ == "__main__":
-    listen()
+    while True:
+        listen()
