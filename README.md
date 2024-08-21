@@ -31,11 +31,12 @@ This Python program listens for voice commands to play MP3 songs from a specifie
    ```
 
 4. **Give a voice command**:
-   - Say `"start"` followed by the name of the song you want to play. For example, `"start NeverGonnaGiveYouUp"` to play a song with "NeverGonnaGiveYouUp" in the filename.
+   - Say `"play"` followed by the name of the song you want to play. For example, `"play NeverGonnaGiveYouUp"` to play a song with "NeverGonnaGiveYouUp" in the filename.
 
 5. **Playback**:
    - The program will find the song in the `./songs` directory and start playing it.
    - It will wait for the song to finish before listening for the next command.
+   - If you want to stop the program, say `"stop listening"`
 
 ## Example
 
@@ -43,7 +44,7 @@ Assume you have a song named `NeverGonnaGiveYouUp.mp3` in the `./songs` director
 
 - Start the program and say: 
   ```
-  start NeverGonnaGiveYouUp
+  play NeverGonnaGiveYouUp
   ```
 - The program will search for `NeverGonnaGiveYouUp.mp3`, load it, and begin playback.
 
