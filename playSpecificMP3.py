@@ -34,6 +34,7 @@ def listen():
 def play_song_from_directory(song, directory):
     pygame.mixer.init()
     for file in os.listdir(directory):
+        # TODO: Fix multiple word song parsing/playing
         if song.lower() in str(file).lower() and file.endswith('.mp3'):
             mp3_path = os.path.join(directory, file)
             print(f"Now playing: {file}")
