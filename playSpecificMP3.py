@@ -17,7 +17,7 @@ def listen():
         wordsInPhrase = phrase.split()
 
         if wordsInPhrase[0].lower() == "play" and len(wordsInPhrase) > 1:
-            song = ' '.join(wordsInPhrase[1:])
+            song = ''.join(wordsInPhrase[1:])
             print(song)
             play_song_from_directory(song, "./songs")
             # Wait for the music to finish playing
